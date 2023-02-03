@@ -15,17 +15,11 @@ public class Capsule : Figure
     // Update is called once per frame
     void Update()
     {
-        //StartCoroutine(Wait());
+        
     }
 
-    private void Jump()
+    private void Jump() // ABSTRACTION
     {
         body.AddForce(Vector3.up * 10, ForceMode.Impulse);
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(1);
-        Jump();
     }
 }

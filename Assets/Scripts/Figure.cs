@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Figure : MonoBehaviour
 {
-    protected float speed = 10;
+    private float speed = 10;
+    protected float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    } // ENCAPSULATION
     // Start is called before the first frame update
-    protected void MoveForward()
+    protected virtual void MoveForward()
     {
         transform.Translate(-Vector3.forward * speed * Time.deltaTime);
     }
