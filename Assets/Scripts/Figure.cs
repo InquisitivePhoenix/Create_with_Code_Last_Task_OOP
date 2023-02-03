@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class Figure : MonoBehaviour
 {
-    protected float speed = 1;
+    protected float speed = 10;
     // Start is called before the first frame update
-    void Start()
+    protected void MoveForward()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Move();
-    }
-
-    protected void Move()
-    {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(-Vector3.forward * speed * Time.deltaTime);
     }
 }
